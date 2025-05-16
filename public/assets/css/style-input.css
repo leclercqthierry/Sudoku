@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+.cell {
+    width: calc(100vw / 9);
+    height: calc(100vw / 9);
+    margin: 0;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.cell:nth-child(1) {
+    border-top: 2px solid black;
+}
+
+.cell:nth-child(19),
+.cell:nth-child(46),
+.cell:nth-child(73) {
+    border-bottom: 2px solid black;
+}
+
+.cell:nth-child(2) {
+    border-top: 2px solid black;
+}
+
+.cell:nth-child(20),
+.cell:nth-child(47),
+.cell:nth-child(74) {
+    border-bottom: 2px solid black;
+}
+
+.cell:nth-child(3) {
+    border-top: 2px solid black;
+}
+
+.cell:nth-child(21),
+.cell:nth-child(48),
+.cell:nth-child(75) {
+    border-bottom: 2px solid black;
+}
+
+.cell:nth-child(4) {
+    border-top: 2px solid black;
+}
+
+.cell:nth-child(22),
+.cell:nth-child(49),
+.cell:nth-child(76) {
+    border-bottom: 2px solid black;
+}
+
+.cell:nth-child(5) {
+    border-top: 2px solid black;
+}
+
+.cell:nth-child(23),
+.cell:nth-child(50),
+.cell:nth-child(77) {
+    border-bottom: 2px solid black;
+}
+
+.cell:nth-child(6) {
+    border-top: 2px solid black;
+}
+
+.cell:nth-child(24),
+.cell:nth-child(51),
+.cell:nth-child(78) {
+    border-bottom: 2px solid black;
+}
+
+.cell:nth-child(7) {
+    border-top: 2px solid black;
+}
+
+.cell:nth-child(25),
+.cell:nth-child(52),
+.cell:nth-child(79) {
+    border-bottom: 2px solid black;
+}
+
+.cell:nth-child(8) {
+    border-top: 2px solid black;
+}
+
+.cell:nth-child(26),
+.cell:nth-child(53),
+.cell:nth-child(80) {
+    border-bottom: 2px solid black;
+}
+
+.cell:nth-child(9) {
+    border-top: 2px solid black;
+}
+
+.cell:nth-child(27),
+.cell:nth-child(54),
+.cell:nth-child(81) {
+    border-bottom: 2px solid black;
+}
+
+.cell:nth-child(9n + 1) {
+    border-left: 2px solid black;
+}
+
+.cell:nth-child(3n) {
+    border-right: 2px solid black;
+}
+
+.selected {
+    background-color: rgb(51, 142, 233);
+}
+
+.correct {
+    background-color: rgb(95, 250, 95);
+    animation-name: shakeY;
+    animation-duration: 1s;
+}
+
+.incorrect {
+    background-color: rgb(250, 95, 95);
+    animation-name: shakeX;
+    animation-duration: 1s;
+}
+
+@keyframes shakeX {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-5px);
+    }
+    20% {
+        transform: translateX(5px);
+    }
+    30% {
+        transform: translateX(-5px);
+    }
+    40% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+    60% {
+        transform: translateX(5px);
+    }
+    70% {
+        transform: translateX(-5px);
+    }
+    80% {
+        transform: translateX(5px);
+    }
+    90% {
+        transform: translateX(-5px);
+    }
+}
+@keyframes shakeY {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-5px);
+    }
+    20% {
+        transform: translateY(5px);
+    }
+    30% {
+        transform: translateY(-5px);
+    }
+    40% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+    70% {
+        transform: translateY(-5px);
+    }
+    80% {
+        transform: translateY(5px);
+    }
+    90% {
+        transform: translateY(-5px);
+    }
+}
+
+@media screen and (min-width: 40rem) {
+    .cell {
+        width: 71.1px;
+        height: 71.1px;
+    }
+}
