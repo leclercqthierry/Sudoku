@@ -7,75 +7,30 @@
         <link rel="stylesheet" href="./public/assets/css/style.css" />
         <title>Jeu - Sudoku</title>
     </head>
+
     <body class="bg-linear-to-r from-yellow-500 to-red-600 text-center">
         <h1 class="my-2.5 text-3xl">Sudoku</h1>
-        <h2 class="my-1.5 text-2xl underline decoration-1">Régles du jeu</h2>
+
+        <h2 class="my-1.5 text-2xl underline decoration-1">Règles du jeu</h2>
         <p class="mx-2.5 text-justify leading-5">
-            Vous devez remplir la grille en utilisant les chiffres de 1 à 9
-            selon la règle suivante: Chaque carré, chaque ligne et chaque
-            colonne ne peut comporter qu'une seule fois chaque chiffre. Le
-            bouton Effacer sert à effacer la grille (Nouvelle grille).
+            Vous devez remplir la grille en utilisant les chiffres de 1 à 9 selon la règle suivante :
+            chaque carré, chaque ligne et chaque colonne ne peut comporter qu'une seule fois chaque chiffre.
+            Le bouton Effacer sert à effacer la grille (Nouvelle grille).
         </p>
+
         <div
             id="container"
             class="mx-0 my-2.5 flex flex-wrap items-center justify-center bg-amber-50 text-center sm:mx-auto sm:h-160 sm:w-160"
-        >
-            <!--Ici sera générée la grille-->
+        ></div>
+
+        <div class="mt-2.5 flex justify-center gap-2">
+            <button id="btn_clear" class="btn-choice">Effacer</button>
+            <!-- Les boutons 1 à 9 seront générés ici -->
+            <div id="digit_buttons"></div>
         </div>
-        <div class="mt-2.5 flex justify-center">
-            <button
-                id="btn_clear"
-                class="cursor-pointer rounded-sm border bg-amber-50 px-2.5 py-2.5 transition-transform duration-400 ease-in-out hover:scale-90 hover:transition-transform hover:ease-in-out"
-            >
-                Effacer
-            </button>
-            <button
-                class="digit_choice cursor-pointer rounded-sm border bg-amber-50 px-2.5 py-2.5 transition-transform duration-400 ease-in-out hover:scale-90 hover:transition-transform hover:ease-in-out"
-            >
-                1
-            </button>
-            <button
-                class="digit_choice cursor-pointer rounded-sm border bg-amber-50 px-2.5 py-2.5 transition-transform duration-400 ease-in-out hover:scale-90 hover:transition-transform hover:ease-in-out"
-            >
-                2
-            </button>
-            <button
-                class="digit_choice cursor-pointer rounded-sm border bg-amber-50 px-2.5 py-2.5 transition-transform duration-400 ease-in-out hover:scale-90 hover:transition-transform hover:ease-in-out"
-            >
-                3
-            </button>
-            <button
-                class="digit_choice cursor-pointer rounded-sm border bg-amber-50 px-2.5 py-2.5 transition-transform duration-400 ease-in-out hover:scale-90 hover:transition-transform hover:ease-in-out"
-            >
-                4
-            </button>
-            <button
-                class="digit_choice cursor-pointer rounded-sm border bg-amber-50 px-2.5 py-2.5 transition-transform duration-400 ease-in-out hover:scale-90 hover:transition-transform hover:ease-in-out"
-            >
-                5
-            </button>
-            <button
-                class="digit_choice cursor-pointer rounded-sm border bg-amber-50 px-2.5 py-2.5 transition-transform duration-400 ease-in-out hover:scale-90 hover:transition-transform hover:ease-in-out"
-            >
-                6
-            </button>
-            <button
-                class="digit_choice cursor-pointer rounded-sm border bg-amber-50 px-2.5 py-2.5 transition-transform duration-400 ease-in-out hover:scale-90 hover:transition-transform hover:ease-in-out"
-            >
-                7
-            </button>
-            <button
-                class="digit_choice cursor-pointer rounded-sm border bg-amber-50 px-2.5 py-2.5 transition-transform duration-400 ease-in-out hover:scale-90 hover:transition-transform hover:ease-in-out"
-            >
-                8
-            </button>
-            <button
-                class="digit_choice cursor-pointer rounded-sm border bg-amber-50 px-2.5 py-2.5 transition-transform duration-400 ease-in-out hover:scale-90 hover:transition-transform hover:ease-in-out"
-            >
-                9
-            </button>
-        </div>
+
         <script src="./public/assets/js/grid.js"></script>
+        <script src="./public/assets/js/buttons.js"></script>
         <script src="./public/assets/js/script.js" type="module"></script>
     </body>
 </html>
